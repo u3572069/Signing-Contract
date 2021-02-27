@@ -1,0 +1,159 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Aborted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "SignatureReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "SigningConfirmed",
+				"type": "event"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "abort",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "company",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "confirmSigned",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "confirmSigning",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "signer",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "state",
+				"outputs": [
+					{
+						"internalType": "enum Signing.State",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {
+				"abort()": {
+					"notice": "Abort the signature and reclaim the ether. Can only be called by the signer before the contract is locked."
+				},
+				"confirmSigned()": {
+					"notice": "Confirm that you (the company) received the signature. This will release the locked ether."
+				},
+				"confirmSigning()": {
+					"notice": "Confirm the signing as company. Transaction has to include `2 * value` ether. The ether will be locked until confirmSigning is called."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"browser/Signing contacts/signing.sol": "Signing"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"browser/Signing contacts/signing.sol": {
+			"keccak256": "0x7f1c53f87704b3628920c197e29bea59f9f271336df832c587995ba7d49e9866",
+			"urls": [
+				"bzz-raw://742156eb95d5e2838b566aebc370b4d7e9d868d5c3a3d90fcd777f72bdbcad89",
+				"dweb:/ipfs/QmV2dJdQ47i9JStp5wuqegkAYjbQ5qW7WHqy93xQNkDKSW"
+			]
+		}
+	},
+	"version": 1
+}
